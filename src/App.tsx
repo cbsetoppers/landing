@@ -428,6 +428,7 @@ export default function App() {
   const [openPolicy, setOpenPolicy] = useState(false);
   const [policy, setPolicy] = useState<'privacy' | 'terms' | 'refund'>('privacy');
   const [currentPage, setCurrentPage] = useState<'home' | 'privacy' | 'terms' | 'refund' | 'delivery'>('home');
+  const currentYear = new Date().getFullYear();
 
   const getPolicyData = (policy: 'privacy' | 'terms' | 'refund' | 'delivery') => {
     switch (policy) {
@@ -435,54 +436,98 @@ export default function App() {
         return {
           title: 'Privacy Policy',
           paragraphs: [
-            'Last Updated: March 17, 2026',
-            'At CBSE T0PPERS, accessible from https://cbsetoppers.com (the "Website"), one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by CBSE T0PPERS and how we use it.',
-            '1. Information We Collect: We collect several different types of information for various purposes to provide and improve our Service to you. This includes Personal Data (email address, first and last name, phone number) and Usage Data (how the Service is accessed and used).',
-            '2. Log Files: CBSE T0PPERS follows a standard procedure of using log files. These files log visitors when they visit websites. The information collected by log files include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks.',
-            '3. Cookies and Web Beacons: Like any other website, CBSE T0PPERS uses "cookies". These cookies are used to store information including visitors\' preferences, and the pages on the website that the visitor accessed or visited. The information is used to optimize the users\' experience by customizing our web page content based on visitors\' browser type and/or other information.',
-            '4. Use of Data: CBSE T0PPERS uses the collected data for various purposes: to provide and maintain our Service, to notify you about changes to our Service, to provide customer support, and to gather analysis or valuable information so that we can improve our Service.',
-            '5. Security of Data: The security of your data is important to us but remember that no method of transmission over the Internet or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your Personal Data, we cannot guarantee its absolute security.',
-            '6. Consent: By using our website, you hereby consent to our Privacy Policy and agree to its terms.'
+            'Effective Date: March 2025',
+            'Platform: T0PPERS 24/7 Website & App',
+            'Sub-Units: CBSE T0PPERS (IX, X, XI, XII) | CUET T0PPERS | NEET T0PPERS | JEE T0PPERS',
+            '1. INTRODUCTION: T0PPERS 24/7 ("we", "our", "us") is committed to protecting the privacy and personal data of all users who access our website and the T0PPERS 24/7 App. This Privacy Policy explains how we collect, use, store, and protect your personal information when you use our platform and its sub-units: CBSE T0PPERS (Classes IX, X, XI, XII), CUET T0PPERS, NEET T0PPERS, and JEE T0PPERS. By using our website, app, or purchasing any study material from the T0PPERS STORE, you agree to the terms of this Privacy Policy.',
+            '2. INFORMATION WE COLLECT:',
+            '2.1 Personal Information: When you register or make a purchase on our platform, we may collect: Full name; Email address (used for sending purchased study material PDFs and receipts); Phone number; Billing address and payment information (processed securely through payment gateways); Class/Grade and target examination (CBSE, CUET, NEET, JEE, etc.).',
+            '2.2 Usage Data: We automatically collect certain information when you use our platform: Device type, browser type, and operating system; IP address and approximate location; Pages visited, features used, and time spent on the platform; Login timestamps and session duration within the T0PPERS 24/7 App.',
+            '2.3 Study Material Access Data: When you purchase study material from the T0PPERS STORE, we record: Materials purchased and transaction history; PDF access and download activity within the T0PPERS 24/7 App; Email address used for delivery of PDFs and receipts.',
+            '3. HOW WE USE YOUR INFORMATION: We use the information collected for the following purposes: To deliver purchased study material PDFs and purchase receipts to your registered or provided email address; To provide access to purchased PDFs within the T0PPERS 24/7 App; To manage your account and process transactions; To send important updates, notifications, and announcements related to your enrolled sub-unit; To improve our platform, content, and user experience; To respond to support queries and grievances; To comply with applicable legal and regulatory obligations.',
+            '4. HOW WE SHARE YOUR INFORMATION: We do not sell, trade, or rent your personal information to third parties. We may share your data only in the following circumstances: With payment gateway providers (such as Razorpay, Paytm, etc.) solely for the purpose of processing your transactions securely; With email service providers (such as Zoho Mail) for delivering your purchased PDFs and receipts; With legal authorities if required by applicable law, court order, or government regulation; With service providers who assist in operating our platform, bound by confidentiality obligations.',
+            '5. DATA STORAGE & SECURITY: We take appropriate technical and organisational measures to protect your personal data from unauthorised access, disclosure, alteration, or destruction. These measures include: Encrypted data transmission (SSL/TLS); Secure servers and databases; Restricted access to personal data on a need-to-know basis. While we implement stringent security practices, no method of electronic transmission or storage is 100% secure. We encourage users to use strong passwords and keep their login credentials confidential.',
+            '6. PDF DELIVERY & ACCESS: Upon successful purchase from the T0PPERS STORE: The purchased PDF study material and a purchase receipt will be sent to the email address provided at the time of purchase or your registered email address on file. Access to the purchased PDF will also be granted within the T0PPERS 24/7 App under your account. We are not responsible for non-delivery of emails due to incorrect email addresses provided by the user or emails being filtered by spam/junk folders.',
+            '7. COOKIES: Our website may use cookies to enhance your browsing experience. Cookies help us understand how you interact with our platform and allow us to remember your preferences. You may disable cookies through your browser settings; however, this may affect certain features of our website.',
+            '8. CHILDREN\'S PRIVACY: T0PPERS 24/7 provides educational content primarily for students in Classes IX through XII and those preparing for CUET, NEET, and JEE examinations. Users below the age of 13 must obtain consent from a parent or legal guardian before using our platform or making any purchases.',
+            '9. YOUR RIGHTS: You have the right to: Access and review the personal data we hold about you; Request correction of inaccurate or outdated data; Request deletion of your personal data, subject to legal and contractual obligations; Withdraw consent for marketing communications at any time. To exercise any of these rights, please contact our support team: cbsetoppers@zohomail.in; tarun.in@zohomail.in; luckychawla@zohomail.in; WhatsApp: +919568902453',
+            '10. CHANGES TO THIS POLICY: We reserve the right to update this Privacy Policy at any time. Any changes will be posted on this page with an updated effective date. We encourage users to review this policy periodically.',
+            '11. CONTACT US: For any questions, concerns, or requests related to this Privacy Policy, please reach out to the T0PPERS 24/7 support team: cbsetoppers@zohomail.in; tarun.in@zohomail.in; luckychawla@zohomail.in; WhatsApp: +919568902453. Support Hours: Monday to Saturday, 9:00 AM - 6:00 PM IST',
+            `© ${currentYear} T0PPERS 24/7 | All Rights Reserved`
           ]
         };
       case 'terms':
         return {
           title: 'Terms & Conditions',
           paragraphs: [
-            'Last Updated: March 17, 2026',
-            'Welcome to CBSE T0PPERS! These terms and conditions outline the rules and regulations for the use of CBSE T0PPERS\'s Website.',
-            '1. Intellectual Property Rights: Other than the content you own, under these Terms, CBSE T0PPERS and/or its licensors own all the intellectual property rights and materials contained in this Website. You are granted limited license only for purposes of viewing the material contained on this Website.',
-            '2. Restrictions: You are specifically restricted from all of the following: publishing any Website material in any other media; selling, sublicensing and/or otherwise commercializing any Website material; publicly performing and/or showing any Website material; using this Website in any way that is or may be damaging to this Website.',
-            '3. Your Content: In these Website Standard Terms and Conditions, "Your Content" shall mean any audio, video text, images or other material you choose to display on this Website. By displaying Your Content, you grant CBSE T0PPERS a non-exclusive, worldwide irrevocable, sub licensable license to use, reproduce, adapt, publish, translate and distribute it in any and all media.',
-            '4. No warranties: This Website is provided "as is," with all faults, and CBSE T0PPERS express no representations or warranties, of any kind related to this Website or the materials contained on this Website.',
-            '5. Limitation of liability: In no event shall CBSE T0PPERS, nor any of its officers, directors and employees, be held liable for anything arising out of or in any way connected with your use of this Website whether such liability is under contract.',
-            '6. Governing Law & Jurisdiction: These Terms will be governed by and interpreted in accordance with the laws of India, and you submit to the non-exclusive jurisdiction of the state and federal courts located in India for the resolution of any disputes.'
+            'Effective Date: March 2025',
+            'Platform: T0PPERS 24/7 Website & App',
+            'Sub-Units: CBSE T0PPERS (IX, X, XI, XII) | CUET T0PPERS | NEET T0PPERS | JEE T0PPERS',
+            '1. ACCEPTANCE OF TERMS: By accessing or using the T0PPERS 24/7 website, the T0PPERS 24/7 App, or purchasing any study material from the T0PPERS STORE, you agree to be bound by these Terms & Conditions. If you do not agree to these terms, please discontinue use of our platform immediately. These Terms apply to all sub-units under T0PPERS 24/7, including CBSE T0PPERS (Classes IX, X, XI, XII), CUET T0PPERS, NEET T0PPERS, and JEE T0PPERS.',
+            '2. PLATFORM DESCRIPTION: T0PPERS 24/7 is an educational platform providing digital study materials, resources, and content to students preparing for CBSE board examinations (Classes IX-XII), CUET, NEET, and JEE. Study materials are available for purchase through the T0PPERS STORE and are delivered in PDF format to your registered or provided email, with in-app access via the T0PPERS 24/7 App.',
+            '3. USER ELIGIBILITY & REGISTRATION: You must be at least 13 years of age to use this platform. Users below 18 should use the platform under parental or guardian supervision. You agree to provide accurate, complete, and up-to-date information during registration and at the time of purchase. You are responsible for maintaining the confidentiality of your account credentials. You must notify us immediately of any unauthorised use of your account.',
+            '4. STUDY MATERIAL & INTELLECTUAL PROPERTY:',
+            '4.1 Ownership: All study materials, PDFs, notes, question papers, mock tests, and content available on T0PPERS 24/7 are the exclusive intellectual property of T0PPERS 24/7 or its licensors. These are protected under applicable copyright and intellectual property laws.',
+            '4.2 Permitted Use: Purchased study materials are licensed for personal, non-commercial educational use only. You may access, read, and download PDFs for your own study purposes.',
+            '4.3 Prohibited Use: You must not reproduce, redistribute, resell, sublicense, share, upload, or transmit any purchased study material to any third party in any form. You must not use any content for commercial purposes, coaching institutes, or bulk distribution. Unauthorised sharing or piracy of purchased PDFs may result in immediate account suspension and legal action.',
+            '5. PURCHASE & PAYMENT: All purchases made on the T0PPERS STORE are subject to the listed price at the time of purchase. Prices are inclusive of applicable taxes unless stated otherwise. Payments must be made through the secure payment options available on our platform. T0PPERS 24/7 does not store credit/debit card information on its servers. Upon successful payment, the purchased PDF study material and receipt will be sent to your registered or provided email address, and access will be activated inside the T0PPERS 24/7 App.',
+            '6. PDF DELIVERY & APP ACCESS: Once a purchase is confirmed: The PDF study material and purchase receipt will be delivered to the email address provided during checkout or your registered account email. In-app access to the purchased PDF will be granted within the T0PPERS 24/7 App under your account.',
+            'T0PPERS 24/7 is not liable for non-receipt of emails due to incorrect email addresses, full inboxes, or emails classified as spam. Please contact our support team if you do not receive your material within the expected timeframe.',
+            '7. USER CONDUCT: You agree not to: Use the platform for any unlawful, fraudulent, or harmful purpose; Impersonate any person or entity; Upload or transmit viruses, malware, or any harmful code; Attempt to gain unauthorised access to any part of our platform or servers; Interfere with or disrupt the integrity or performance of our platform.',
+            '8. DISCLAIMERS: T0PPERS 24/7 provides study materials and resources for educational assistance. While we strive for accuracy and quality, we do not guarantee specific academic results or examination outcomes. Our content is prepared to align with CBSE, CUET, NEET, and JEE syllabi, but we are not affiliated with, endorsed by, or officially connected to the CBSE Board, NTA, or any other examination body.',
+            '9. LIMITATION OF LIABILITY: To the fullest extent permitted by applicable law, T0PPERS 24/7 shall not be liable for any indirect, incidental, consequential, or punitive damages arising from your use of or inability to use the platform or study materials. Our total liability in any matter shall not exceed the amount paid by you for the specific purchase giving rise to the claim.',
+            '10. ACCOUNT TERMINATION: We reserve the right to suspend or terminate your account, without prior notice, if we determine that you have violated these Terms & Conditions. In such cases, access to purchased materials within the app may be revoked without refund.',
+            '11. GOVERNING LAW: These Terms & Conditions shall be governed by and construed in accordance with the laws of India. Any disputes arising shall be subject to the exclusive jurisdiction of the courts in Dehradun, Uttarakhand, India.',
+            '12. AMENDMENTS: T0PPERS 24/7 reserves the right to modify these Terms & Conditions at any time. Continued use of the platform after any changes constitutes your acceptance of the revised terms.',
+            '13. CONTACT US: For any queries regarding these Terms & Conditions, please contact our support team: cbsetoppers@zohomail.in; tarun.in@zohomail.in; luckychawla@zohomail.in; WhatsApp: +919568902453. Support Hours: Monday to Saturday, 9:00 AM - 6:00 PM IST',
+            `© ${currentYear} T0PPERS 24/7 | All Rights Reserved`
           ]
         };
       case 'refund':
         return {
-          title: 'Refund & Cancellation Policy',
+          title: 'Cancellation & Refund Policy',
           paragraphs: [
-            'Last Updated: March 17, 2026',
-            '1. General Policy: At CBSE T0PPERS, we strive to provide the best educational resources. Most of our content and basic services are provided free of charge on our Telegram channels and website.',
-            '2. Digital Products: For any premium digital study materials or courses purchased through our platform, we maintain a strict "No Refund" policy once the digital material has been accessed or downloaded. This is because digital products cannot be "returned" in the traditional sense.',
-            '3. Cancellation: You may cancel your subscription to any paid service at any time. However, cancellation does not entitle you to a refund for the period already paid for. Your access will remain active until the end of the current billing cycle.',
-            '4. Exceptions: We may, at our sole discretion, provide a refund if there was a technical error that prevented you from accessing the service for a significant period (more than 48 hours) or if the product delivered was significantly different from what was described.',
-            '5. Request Process: To request an exception, please email cbsetoppers@zohomail.in with your transaction details and a description of the issue. All requests must be made within 7 days of the purchase date.',
-            '6. Processing Time: If a refund is approved, it will be processed within 5-10 business days and credited back to the original payment method used during the transaction.'
+            'Effective Date: March 2025',
+            'Platform: T0PPERS 24/7 Website & App',
+            'Sub-Units: CBSE T0PPERS (IX, X, XI, XII) | CUET T0PPERS | NEET T0PPERS | JEE T0PPERS',
+            '1. OVERVIEW: At T0PPERS 24/7, we are committed to delivering high-quality digital study materials through the T0PPERS STORE. Since all our products are digital (PDF study materials) and are delivered instantly upon successful payment, we maintain a specific policy regarding cancellations and refunds as outlined below.',
+            '2. NATURE OF PRODUCTS: All products sold through the T0PPERS STORE are: Digital study material in PDF format; Instantly delivered to your registered or provided email address upon successful payment; Simultaneously made accessible within your account on the T0PPERS 24/7 App. Given the digital and instant-access nature of these products, please read this policy carefully before making a purchase.',
+            '3. CANCELLATION POLICY:',
+            '3.1 Before Payment: You may cancel your order at any time before completing the payment. Once the payment is successfully processed, the order is considered confirmed and the digital content is delivered.',
+            '3.2 After Payment: Once a purchase has been confirmed and the PDF study material has been delivered to your email and/or access has been activated in the T0PPERS 24/7 App, cancellation of the order is not possible. This is because digital content, once delivered and accessed, cannot be "returned" in the same manner as a physical product.',
+            '4. REFUND POLICY:',
+            '4.1 Non-Refundable Purchases: The following situations are NOT eligible for a refund: The PDF study material has been delivered to your email address; Access to the study material has been activated in the T0PPERS 24/7 App; The material was purchased by mistake for the wrong class, subject, or examination; Dissatisfaction with the content after accessing it; Slow internet speed causing issues with viewing or downloading the PDF; Accidental or duplicate purchases (however, please contact support immediately — see Section 4.2).',
+            '4.2 Eligible Refund Scenarios: A refund or replacement may be considered in the following exceptional circumstances: The PDF file delivered is corrupted, unreadable, or empty; You were charged but did not receive the PDF via email AND the material is not accessible inside the T0PPERS 24/7 App; You were charged multiple times for the same product due to a technical error. In these cases, please contact our support team within 48 hours of the transaction with relevant details.',
+            '5. REFUND PROCESSING: If a refund is approved, it will be processed as follows: Refunds will be credited back to the original payment method (bank account, UPI, card, etc.); Processing time: 5 to 7 business days from the date of approval; You will receive an email confirmation once the refund has been initiated. T0PPERS 24/7 reserves the right to make the final decision on all refund requests.',
+            '6. DUPLICATE PURCHASE: If you have accidentally made a duplicate purchase for the same study material, please contact our support team immediately. We will investigate and, if confirmed, issue a refund for the duplicate transaction.',
+            '7. CONTACT FOR CANCELLATION & REFUND QUERIES: To raise a cancellation or refund request, or for any related queries, please contact: cbsetoppers@zohomail.in; tarun.in@zohomail.in; luckychawla@zohomail.in; WhatsApp: +919568902453. Support Hours: Monday to Saturday, 9:00 AM - 6:00 PM IST',
+            `© ${currentYear} T0PPERS 24/7 | All Rights Reserved`
           ]
         };
       case 'delivery':
         return {
           title: 'Delivery Policy',
           paragraphs: [
-            'Last Updated: March 17, 2026',
-            '1. Digital Delivery: All products and services offered by CBSE T0PPERS are digital in nature. No physical shipping is required.',
-            '2. Instant Access: Upon successful payment or subscription, users will receive instant access to the premium materials via their dashboard on the website or through a direct link sent to their registered email address.',
-            '3. Email Confirmation: A confirmation email containing the receipt and access instructions will be sent automatically to the user\'s registered email address within minutes of a successful transaction.',
-            '4. Telegram Integration: For certain premium channels, access is granted via a unique invite link. Users are responsible for ensuring they have a valid Telegram account to access these services.',
-            '5. Technical Issues: If you do not receive your access details within 1 hour, please check your spam/junk folder. If it\'s still not found, contact us at cbsetoppers@zohomail.in for manual verification and delivery.',
-            '6. Future Updates: Any updates to the purchased digital materials will be automatically made available to the user through the same access methods without additional costs, unless specified otherwise at the time of purchase.'
+            'Effective Date: March 2025',
+            'Platform: T0PPERS 24/7 Website & App',
+            'Sub-Units: CBSE T0PPERS (IX, X, XI, XII) | CUET T0PPERS | NEET T0PPERS | JEE T0PPERS',
+            '1. INTRODUCTION: This Delivery Policy governs the process by which T0PPERS 24/7 delivers purchased study materials to customers who buy from the T0PPERS STORE. All study materials offered through our platform are in digital PDF format and are delivered electronically. There is no physical/courier delivery of any materials.',
+            '2. MODE OF DELIVERY:',
+            '2.1 Email Delivery: Upon successful payment, the purchased PDF study material will be sent to the email address provided at the time of checkout. If no separate email is provided during checkout, the material will be sent to your registered account email address. A purchase receipt/invoice will also be sent to the same email address.',
+            '2.2 In-App Access (T0PPERS 24/7 App): Access to the purchased PDF will be activated inside your account on the T0PPERS 24/7 App. You can view, read, and access your purchased study materials at any time through the App after logging in with your registered credentials.',
+            '3. DELIVERY TIMELINE: Delivery of study materials is instant and automated upon payment confirmation: Email delivery: Within a few minutes of successful payment; In-app access: Activated immediately or within a maximum of 30 minutes of successful payment. If you do not receive the PDF email within 30 minutes of purchase, please check your spam/junk folder before contacting support.',
+            '4. WHAT YOU WILL RECEIVE: After a successful purchase, you will receive: 1 x PDF Study Material (as purchased) — sent to your email and accessible in the T0PPERS 24/7 App; 1 x Purchase Receipt/Invoice — sent to your email.',
+            '5. EMAIL DELIVERY ISSUES:',
+            '5.1 Non-Receipt of Email: If you do not receive your study material PDF via email, please: Check your spam or junk mail folder; Verify that the email address provided during checkout is correct; Check if your inbox is full; Wait up to 30 minutes from the time of purchase before raising a concern.',
+            '5.2 Incorrect Email Provided: If you provided an incorrect email address at the time of purchase, please contact our support team immediately with your order ID and the correct email address. We will re-send the PDF to the correct address, provided the purchase is verified.',
+            '6. IN-APP ACCESS ISSUES: If your purchased PDF does not appear inside the T0PPERS 24/7 App after 30 minutes: Log out and log back in to refresh your account; Ensure you are logged in with the same account used for the purchase; Check your internet connection; If the issue persists, contact our support team with your order details.',
+            '7. SUPPORTED DEVICES & FORMATS: Study material PDFs are compatible with: T0PPERS 24/7 App (available on Android and iOS); Any PDF reader application on mobile or desktop; Email clients on mobile and desktop devices.',
+            '8. RE-DELIVERY POLICY: Re-delivery of study material PDFs will be provided free of charge in the following cases: The original PDF email was not received due to a platform-side error; The in-app access was not activated due to a technical issue on our end; The PDF file delivered was corrupted or unreadable. Re-delivery requests will NOT be entertained for PDFs that have already been successfully delivered and accessed, or requests made after 7 days.',
+            '9. PURCHASED MATERIAL VALIDITY: Access to purchased study materials in the T0PPERS 24/7 App is provided for the duration of your active account. However, access may be revoked in the event of violation of the Terms & Conditions, account deletion, or suspension due to misuse.',
+            '10. SHARING RESTRICTIONS: Purchased PDFs are for personal, individual use only. Forwarding, sharing, uploading, or distributing the study material to any third party — whether for free or for a fee — is strictly prohibited and may result in legal action.',
+            '11. CONTACT FOR DELIVERY SUPPORT: For any issues related to delivery of your study material, please reach out to our support team: cbsetoppers@zohomail.in; tarun.in@zohomail.in; luckychawla@zohomail.in; WhatsApp: +919568902453. Support Hours: Monday to Saturday, 9:00 AM - 6:00 PM IST',
+            '12. CHANGES TO THIS POLICY: T0PPERS 24/7 reserves the right to amend this Delivery Policy at any time. Updates will be posted on the website with a revised effective date.',
+            `© ${currentYear} T0PPERS 24/7 | All Rights Reserved`
           ]
         };
     }
@@ -543,7 +588,7 @@ export default function App() {
                 >
                   <Avatar 
                     src="./cbsetoppers_original.png" 
-                    alt="CBSE T0PPERS Logo"
+                    alt="T0PPERS 24/7 Logo"
                     sx={{ 
                       width: 50, 
                       height: 50, 
@@ -554,7 +599,7 @@ export default function App() {
                     <GraduationCap color="#7c3aed" />
                   </Avatar>
                   <Typography variant="h6" component="div" sx={{ fontWeight: 900, letterSpacing: -1, fontSize: '1.5rem' }}>
-                    CBSE <Box component="span" sx={{ color: 'secondary.main' }}>T0PPERS</Box>
+                    T0PPERS <Box component="span" sx={{ color: 'secondary.main' }}>24/7</Box>
                   </Typography>
                 </Box>
 
@@ -1181,7 +1226,7 @@ export default function App() {
                   <Box sx={{ width: 40, height: 4, bgcolor: 'primary.main', borderRadius: 0.5 }} />
                   <Box>
                     <Typography variant="h6" sx={{ fontWeight: 900, lineHeight: 1, fontSize: '1.1rem' }}>Founder</Typography>
-                    <Typography variant="subtitle2" sx={{ opacity: 0.6, fontWeight: 700, fontSize: '0.8rem' }}>CBSE T0PPERS Initiative</Typography>
+                    <Typography variant="subtitle2" sx={{ opacity: 0.6, fontWeight: 700, fontSize: '0.8rem' }}>T0PPERS 24/7 Initiative</Typography>
                   </Box>
                 </Stack>
               </Box>
@@ -1201,13 +1246,13 @@ export default function App() {
                 <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 4 }}>
                   <Avatar 
                     src="./cbsetoppers_original.png" 
-                    alt="CBSE T0PPERS Logo"
+                    alt="T0PPERS 24/7 Logo"
                     sx={{ width: 56, height: 56, bgcolor: 'white' }}
                   >
                     <GraduationCap size={28} color="#7c3aed" />
                   </Avatar>
                   <Typography variant="h5" sx={{ fontWeight: 900, letterSpacing: -1 }}>
-                    CBSE <Box component="span" sx={{ color: 'secondary.main' }}>T0PPERS</Box>
+                    T0PPERS <Box component="span" sx={{ color: 'secondary.main' }}>24/7</Box>
                   </Typography>
                 </Box>
                 <Typography variant="h6" color="text.secondary" sx={{ maxWidth: 450, fontWeight: 400, lineHeight: 1.6, fontSize: '1rem' }}>
@@ -1258,7 +1303,7 @@ export default function App() {
             
             <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 4 }}>
               <Typography variant="body2" sx={{ fontWeight: 700, color: 'text.secondary' }}>
-                © 2026 CBSE T0PPERS. Crafted for Excellence.
+                © {new Date().getFullYear()} T0PPERS 24/7. Crafted for Excellence.
               </Typography>
               <Stack direction="row" spacing={5}>
                 <Typography onClick={() => setCurrentPage('privacy')} variant="body2" sx={{ fontWeight: 800, color: 'text.secondary', cursor: 'pointer', '&:hover': { color: 'primary.main' } }}>Privacy</Typography>
