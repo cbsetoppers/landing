@@ -587,7 +587,7 @@ export default function App() {
                   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                 >
                   <Avatar 
-                    src="./cbsetoppers_original.png" 
+                    src="./logo.png" 
                     alt="T0PPERS 24/7 Logo"
                     sx={{ 
                       width: 50, 
@@ -1245,7 +1245,7 @@ export default function App() {
               <Grid size={{ xs: 12, md: 5 }}>
                 <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 4 }}>
                   <Avatar 
-                    src="./cbsetoppers_original.png" 
+                    src="./logo.png" 
                     alt="T0PPERS 24/7 Logo"
                     sx={{ width: 56, height: 56, bgcolor: 'white' }}
                   >
