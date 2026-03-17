@@ -440,44 +440,54 @@ export default function App() {
         return {
           title: 'Privacy Policy',
           paragraphs: [
-            'At CBSE T0PPERS, we value your privacy. This policy outlines how we collect, use, and protect your information.',
-            'We collect information you provide directly, such as your name and email when you contact us or subscribe to our updates.',
-            'We use this information to improve our educational services, personalize your experience, and communicate important updates to you.',
-            'We do not share your personal data with third parties without your explicit consent, except as required by law or to provide services you have requested.',
-            'We implement industry-standard security measures to protect your data from unauthorized access, alteration, or destruction, though no method of transmission over the internet is 100% secure.'
+            'Last Updated: March 17, 2026',
+            'At CBSE T0PPERS, accessible from https://cbsetoppers.com (the "Website"), one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by CBSE T0PPERS and how we use it.',
+            '1. Information We Collect: We collect several different types of information for various purposes to provide and improve our Service to you. This includes Personal Data (email address, first and last name, phone number) and Usage Data (how the Service is accessed and used).',
+            '2. Log Files: CBSE T0PPERS follows a standard procedure of using log files. These files log visitors when they visit websites. The information collected by log files include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks.',
+            '3. Cookies and Web Beacons: Like any other website, CBSE T0PPERS uses "cookies". These cookies are used to store information including visitors\' preferences, and the pages on the website that the visitor accessed or visited. The information is used to optimize the users\' experience by customizing our web page content based on visitors\' browser type and/or other information.',
+            '4. Use of Data: CBSE T0PPERS uses the collected data for various purposes: to provide and maintain our Service, to notify you about changes to our Service, to provide customer support, and to gather analysis or valuable information so that we can improve our Service.',
+            '5. Security of Data: The security of your data is important to us but remember that no method of transmission over the Internet or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your Personal Data, we cannot guarantee its absolute security.',
+            '6. Consent: By using our website, you hereby consent to our Privacy Policy and agree to its terms.'
           ]
         };
       case 'terms':
         return {
           title: 'Terms & Conditions',
           paragraphs: [
-            'By accessing and using CBSE T0PPERS, you agree to comply with these terms and conditions.',
-            'All content, including text, graphics, and logos, is the property of CBSE T0PPERS and is protected by copyright and intellectual property laws.',
-            'You may use our resources for personal, educational purposes only. Redistribution, reproduction, or commercial use of our content is strictly prohibited without prior written permission.',
-            'We strive to provide accurate information, but we do not guarantee the completeness or accuracy of all content. Use our resources at your own risk.',
-            'We reserve the right to modify these terms at any time. Your continued use of the site constitutes acceptance of the updated terms.'
+            'Last Updated: March 17, 2026',
+            'Welcome to CBSE T0PPERS! These terms and conditions outline the rules and regulations for the use of CBSE T0PPERS\'s Website.',
+            '1. Intellectual Property Rights: Other than the content you own, under these Terms, CBSE T0PPERS and/or its licensors own all the intellectual property rights and materials contained in this Website. You are granted limited license only for purposes of viewing the material contained on this Website.',
+            '2. Restrictions: You are specifically restricted from all of the following: publishing any Website material in any other media; selling, sublicensing and/or otherwise commercializing any Website material; publicly performing and/or showing any Website material; using this Website in any way that is or may be damaging to this Website.',
+            '3. Your Content: In these Website Standard Terms and Conditions, "Your Content" shall mean any audio, video text, images or other material you choose to display on this Website. By displaying Your Content, you grant CBSE T0PPERS a non-exclusive, worldwide irrevocable, sub licensable license to use, reproduce, adapt, publish, translate and distribute it in any and all media.',
+            '4. No warranties: This Website is provided "as is," with all faults, and CBSE T0PPERS express no representations or warranties, of any kind related to this Website or the materials contained on this Website.',
+            '5. Limitation of liability: In no event shall CBSE T0PPERS, nor any of its officers, directors and employees, be held liable for anything arising out of or in any way connected with your use of this Website whether such liability is under contract.',
+            '6. Governing Law & Jurisdiction: These Terms will be governed by and interpreted in accordance with the laws of India, and you submit to the non-exclusive jurisdiction of the state and federal courts located in India for the resolution of any disputes.'
           ]
         };
       case 'refund':
         return {
-          title: 'Cancellation & Refund Policy',
+          title: 'Refund & Cancellation Policy',
           paragraphs: [
-            'Most of our educational resources are provided free of charge, and thus no refund policy applies to these services.',
-            'For any paid courses or premium services, cancellations must be requested within 7 days of purchase.',
-            'Refund requests will be reviewed on a case-by-case basis. Approved refunds will be processed within 10 business days to the original payment method.',
-            'We reserve the right to deny refund requests if the service has been substantially consumed or if our terms of use have been violated.',
-            'Please contact our support team at cbsetoppers@zohomail.in for any cancellation or refund inquiries.'
+            'Last Updated: March 17, 2026',
+            '1. General Policy: At CBSE T0PPERS, we strive to provide the best educational resources. Most of our content and basic services are provided free of charge on our Telegram channels and website.',
+            '2. Digital Products: For any premium digital study materials or courses purchased through our platform, we maintain a strict "No Refund" policy once the digital material has been accessed or downloaded. This is because digital products cannot be "returned" in the traditional sense.',
+            '3. Cancellation: You may cancel your subscription to any paid service at any time. However, cancellation does not entitle you to a refund for the period already paid for. Your access will remain active until the end of the current billing cycle.',
+            '4. Exceptions: We may, at our sole discretion, provide a refund if there was a technical error that prevented you from accessing the service for a significant period (more than 48 hours) or if the product delivered was significantly different from what was described.',
+            '5. Request Process: To request an exception, please email cbsetoppers@zohomail.in with your transaction details and a description of the issue. All requests must be made within 7 days of the purchase date.',
+            '6. Processing Time: If a refund is approved, it will be processed within 5-10 business days and credited back to the original payment method used during the transaction.'
           ]
         };
       case 'delivery':
         return {
-          title: 'Digital Product Delivery Policy',
+          title: 'Delivery Policy',
           paragraphs: [
-            'At CBSE T0PPERS, we ensure seamless delivery of your digital study materials.',
-            'Upon successful purchase or registration, you will gain immediate access to the digital product directly within your account on our app.',
-            'Additionally, a PDF copy of the study material will be automatically sent to the email address associated with your account.',
-            'Please ensure your email address is correct and up-to-date in your profile settings to receive these materials promptly.',
-            'If you do not receive the email within 24 hours, please check your spam folder or contact our support team at cbsetoppers@zohomail.in.'
+            'Last Updated: March 17, 2026',
+            '1. Digital Delivery: All products and services offered by CBSE T0PPERS are digital in nature. No physical shipping is required.',
+            '2. Instant Access: Upon successful payment or subscription, users will receive instant access to the premium materials via their dashboard on the website or through a direct link sent to their registered email address.',
+            '3. Email Confirmation: A confirmation email containing the receipt and access instructions will be sent automatically to the user\'s registered email address within minutes of a successful transaction.',
+            '4. Telegram Integration: For certain premium channels, access is granted via a unique invite link. Users are responsible for ensuring they have a valid Telegram account to access these services.',
+            '5. Technical Issues: If you do not receive your access details within 1 hour, please check your spam/junk folder. If it\'s still not found, contact us at cbsetoppers@zohomail.in for manual verification and delivery.',
+            '6. Future Updates: Any updates to the purchased digital materials will be automatically made available to the user through the same access methods without additional costs, unless specified otherwise at the time of purchase.'
           ]
         };
     }
@@ -537,7 +547,7 @@ export default function App() {
                   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                 >
                   <Avatar 
-                    src="/cbsetoppers_original.png" 
+                    src="./cbsetoppers_original.png" 
                     alt="CBSE T0PPERS Logo"
                     sx={{ 
                       width: 50, 
@@ -1195,7 +1205,7 @@ export default function App() {
               <Grid size={{ xs: 12, md: 5 }}>
                 <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 4 }}>
                   <Avatar 
-                    src="/cbsetoppers_original.png" 
+                    src="./cbsetoppers_original.png" 
                     alt="CBSE T0PPERS Logo"
                     sx={{ width: 56, height: 56, bgcolor: 'white' }}
                   >
