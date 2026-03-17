@@ -555,7 +555,7 @@ export default function App() {
             left: 0,
             right: 0,
             height: 4,
-            background: 'linear-gradient(to right, #7c3aed, #4c1d95, #10b981)',
+            background: 'linear-gradient(to right, #D4AF37, #FFD700, #DAA520)',
             transformOrigin: '0%',
             zIndex: 2000
           }}
@@ -570,9 +570,9 @@ export default function App() {
             position="fixed" 
             elevation={0} 
             sx={{ 
-              backgroundColor: 'rgba(255, 255, 255, 0.8)', 
+              backgroundColor: 'rgba(0, 0, 0, 0.8)', 
               backdropFilter: 'blur(20px)',
-              borderBottom: '1px solid rgba(124, 58, 237, 0.1)',
+              borderBottom: '1px solid rgba(212, 175, 55, 0.2)',
               color: 'primary.main'
             }}
           >
@@ -590,11 +590,11 @@ export default function App() {
                     sx={{ 
                       width: 50, 
                       height: 50, 
-                      boxShadow: '0 4px 12px rgba(124, 58, 237, 0.2)',
-                      bgcolor: 'white'
+                      boxShadow: '0 4px 12px rgba(212, 175, 55, 0.2)',
+                      bgcolor: 'background.paper'
                     }}
                   >
-                    <GraduationCap color="#7c3aed" />
+                    <GraduationCap color="#D4AF37" />
                   </Avatar>
                   <Typography variant="h6" component="div" sx={{ fontWeight: 900, letterSpacing: -1, fontSize: '1.5rem' }}>
                     T0PPERS <Box component="span" sx={{ color: 'secondary.main' }}>24/7</Box>
@@ -607,7 +607,7 @@ export default function App() {
                       key={item} 
                       variant="body2" 
                       component={motion.p}
-                      whileHover={{ y: -2, color: '#7c3aed' }}
+                      whileHover={{ y: -2, color: 'primary.main' }}
                       sx={{ 
                         fontWeight: 800, 
                         cursor: 'pointer', 
@@ -661,7 +661,7 @@ export default function App() {
           open={mobileOpen}
           onClose={handleDrawerToggle}
           ModalProps={{ keepMounted: true }}
-          sx={{ display: { xs: 'block', md: 'none' }, '& .MuiDrawer-paper': { width: '100%', maxWidth: 320 } }}
+          sx={{ display: { xs: 'block', md: 'none' }, '& .MuiDrawer-paper': { width: '100%', maxWidth: 320, bgcolor: 'background.default' } }}
         >
           <Box sx={{ p: 4, height: '100%', display: 'flex', flexDirection: 'column' }}>
             <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 6 }}>
@@ -673,7 +673,7 @@ export default function App() {
                 <ListItem 
                   key={text} 
                   onClick={handleDrawerToggle} 
-                  sx={{ py: 2.5, px: 0, borderBottom: '1px solid rgba(0,0,0,0.05)' }}
+                  sx={{ py: 2.5, px: 0, borderBottom: '1px solid rgba(212, 175, 55, 0.1)' }}
                   component={motion.li}
                   whileTap={{ x: 10 }}
                 >
@@ -709,13 +709,12 @@ export default function App() {
           </Box>
         </Drawer>
 
-        {/* Hero Section */}
         <Box 
           sx={{ 
             pt: { xs: 18, md: 22 }, 
             pb: { xs: 6, md: 10 }, 
             position: 'relative',
-            background: 'linear-gradient(180deg, rgba(124, 58, 237, 0.05) 0%, rgba(255, 255, 255, 1) 50%, rgba(76, 29, 149, 0.05) 100%)',
+            background: 'linear-gradient(180deg, #000000 0%, #0A0A0A 100%)',
             overflow: 'hidden'
           }}
         >
@@ -729,7 +728,7 @@ export default function App() {
               width: 120,
               height: 120,
               borderRadius: '30% 70% 70% 30% / 30% 30% 70% 70%',
-              background: 'rgba(124, 58, 237, 0.1)',
+              background: 'rgba(212, 175, 55, 0.1)',
               filter: 'blur(40px)',
               zIndex: 0
             }}
@@ -747,7 +746,7 @@ export default function App() {
               width: 150,
               height: 150,
               borderRadius: '50%',
-              background: 'rgba(76, 29, 149, 0.1)',
+              background: 'rgba(212, 175, 55, 0.05)',
               filter: 'blur(50px)',
               zIndex: 0
             }}
@@ -768,17 +767,17 @@ export default function App() {
                     transition={{ delay: 0.2 }}
                   >
                     <Chip 
-                      icon={<Trophy size={16} color="#7c3aed" />} 
+                      icon={<Trophy size={16} color="#D4AF37" />} 
                       label="The Ultimate T0PPER'S Community" 
                       sx={{ 
                         mb: 4, 
-                        bgcolor: 'rgba(124, 58, 237, 0.1)', 
+                        bgcolor: 'rgba(212, 175, 55, 0.1)', 
                         color: 'primary.main', 
                         fontWeight: 900,
                         px: 2,
                         py: 2.5,
                         fontSize: '0.8rem',
-                        border: '1px solid rgba(124, 58, 237, 0.2)',
+                        border: '1px solid rgba(212, 175, 55, 0.2)',
                         textTransform: 'uppercase',
                         letterSpacing: 1.5
                       }} 
@@ -793,7 +792,7 @@ export default function App() {
                       lineHeight: 1,
                       letterSpacing: -2,
                       fontWeight: 900,
-                      background: 'linear-gradient(135deg, #7c3aed 0%, #4c1d95 100%)',
+                      background: 'linear-gradient(135deg, #FFD700 0%, #D4AF37 100%)',
                       WebkitBackgroundClip: 'text',
                       WebkitTextFillColor: 'transparent',
                     }}
@@ -814,7 +813,7 @@ export default function App() {
                     }}
                   >
                     Democratizing education with high-quality resources curated by toppers. 
-                    Join <Box component="span" sx={{ color: 'primary.main', fontWeight: 900, borderBottom: '3px solid #7c3aed' }}>360+ students</Box> who are already transforming their academic journey.
+                    Join <Box component="span" sx={{ color: 'primary.main', fontWeight: 900, borderBottom: '3px solid #D4AF37' }}>360+ students</Box> who are already transforming their academic journey.
                   </MotionTypography>
                   
                   <MotionStack 
@@ -857,7 +856,7 @@ export default function App() {
                           fontWeight: 900, 
                           borderWidth: 2, 
                           borderRadius: 1,
-                          '&:hover': { borderWidth: 2, backgroundColor: 'rgba(124, 58, 237, 0.05)' } 
+                          '&:hover': { borderWidth: 2, backgroundColor: 'rgba(212, 175, 55, 0.1)' } 
                         }}
                         onClick={() => document.getElementById('subunits')?.scrollIntoView({ behavior: 'smooth' })}
                       >
@@ -872,7 +871,7 @@ export default function App() {
         </Box>
 
         {/* Subunits Grid */}
-        <Box id="subunits" sx={{ pt: { xs: 6, md: 10 }, pb: { xs: 3, md: 4 }, bgcolor: '#FDFDFD' }}>
+        <Box id="subunits" sx={{ pt: { xs: 6, md: 10 }, pb: { xs: 3, md: 4 }, bgcolor: 'background.default' }}>
           <Container maxWidth="lg">
             <MotionBox 
               initial="hidden"
@@ -918,7 +917,7 @@ export default function App() {
                       display: 'flex', 
                       flexDirection: 'column',
                       borderRadius: 1,
-                      border: '2px solid rgba(124, 58, 237, 0.05)',
+                      border: '2px solid rgba(212, 175, 55, 0.1)',
                       transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
                       overflow: 'hidden',
                       position: 'relative'
@@ -971,10 +970,10 @@ export default function App() {
                           p: 1.5, 
                           bgcolor: 'rgba(124, 58, 237, 0.03)', 
                           borderRadius: 1,
-                          border: '1px dashed rgba(124, 58, 237, 0.1)'
+                          border: '1px dashed rgba(212, 175, 55, 0.1)'
                         }}
                       >
-                        <Telegram size={18} color="#7c3aed" />
+                        <Telegram size={18} color="#D4AF37" />
                         <Typography variant="body2" sx={{ fontWeight: 800, color: 'primary.main' }}>
                           {unit.telegram}
                         </Typography>
@@ -1043,7 +1042,7 @@ export default function App() {
                           color: 'white', 
                           width: 48, 
                           height: 48,
-                          boxShadow: '0 8px 20px rgba(124, 58, 237, 0.2)'
+                          boxShadow: '0 8px 20px rgba(212, 175, 55, 0.2)'
                         }}>
                           {feature.icon}
                         </Avatar>
@@ -1071,7 +1070,7 @@ export default function App() {
                       bgcolor: 'primary.main', 
                       color: 'white',
                       borderRadius: 1, 
-                      boxShadow: '0 40px 80px rgba(124, 58, 237, 0.2)',
+                      boxShadow: '0 40px 80px rgba(212, 175, 55, 0.2)',
                       position: 'relative',
                       zIndex: 1,
                       overflow: 'hidden'
@@ -1111,8 +1110,8 @@ export default function App() {
                         fontWeight: 900, 
                         fontSize: '1rem', 
                         color: 'primary.main', 
-                        bgcolor: 'white', 
-                        '&:hover': { bgcolor: 'rgba(255,255,255,0.9)' } 
+                        bgcolor: 'background.default', 
+                        '&:hover': { bgcolor: 'background.paper' } 
                       }}
                       href="https://t.me/CBSET0PPERS"
                       target="_blank"
@@ -1167,11 +1166,11 @@ export default function App() {
               viewport={{ once: true }}
               transition={{ duration: 1 }}
               sx={{ 
-                bgcolor: 'white', 
+                bgcolor: 'background.paper', 
                 p: { xs: 4, md: 6 }, 
                 borderRadius: 2, 
-                border: '1px solid rgba(0,0,0,0.05)',
-                boxShadow: '0 30px 60px rgba(0,0,0,0.08)',
+                border: '1px solid rgba(212, 175, 55, 0.1)',
+                boxShadow: '0 30px 60px rgba(0,0,0,0.5)',
                 display: 'flex',
                 flexDirection: { xs: 'column', md: 'row' },
                 alignItems: 'center',
@@ -1185,12 +1184,12 @@ export default function App() {
                   sx={{ 
                     width: { xs: 120, md: 180 }, 
                     height: { xs: 120, md: 180 }, 
-                    bgcolor: 'primary.main',
-                    border: '6px solid #7c3aed',
-                    boxShadow: '0 20px 40px rgba(124, 58, 237, 0.2)'
+                    bgcolor: 'background.paper',
+                    border: '6px solid #D4AF37',
+                    boxShadow: '0 20px 40px rgba(212, 175, 55, 0.2)'
                   }}
                 >
-                  <Trophy size={80} color="#FFFFFF" />
+                  <Trophy size={80} color="#D4AF37" />
                 </Avatar>
                 <Box 
                   sx={{ 
@@ -1232,12 +1231,12 @@ export default function App() {
           </Container>
           
           {/* Background Decoration */}
-          <Box sx={{ position: 'absolute', top: '50%', left: 0, width: '100%', height: '40%', bgcolor: 'rgba(124, 58, 237, 0.02)', zIndex: 0, transform: 'skewY(-3deg)' }} />
+          <Box sx={{ position: 'absolute', top: '50%', left: 0, width: '100%', height: '40%', bgcolor: 'rgba(212, 175, 55, 0.02)', zIndex: 0, transform: 'skewY(-3deg)' }} />
         </Box>
 
         <CountdownSection />
         {/* Footer */}
-        <Box sx={{ pt: 6, pb: 6, bgcolor: 'background.paper', borderTop: '1px solid rgba(124, 58, 237, 0.1)' }}>
+        <Box sx={{ pt: 6, pb: 6, bgcolor: 'background.paper', borderTop: '1px solid rgba(212, 175, 55, 0.1)' }}>
           <Container maxWidth="lg">
             <Grid container spacing={8} sx={{ mb: 5 }}>
               <Grid size={{ xs: 12, md: 5 }}>
@@ -1245,9 +1244,9 @@ export default function App() {
                   <Avatar 
                     src="./icon.png" 
                     alt="T0PPERS 24/7 Logo"
-                    sx={{ width: 56, height: 56, bgcolor: 'white' }}
+                    sx={{ width: 56, height: 56, bgcolor: 'background.paper' }}
                   >
-                    <GraduationCap size={28} color="#7c3aed" />
+                    <GraduationCap size={28} color="#D4AF37" />
                   </Avatar>
                   <Typography variant="h5" sx={{ fontWeight: 900, letterSpacing: -1 }}>
                     T0PPERS <Box component="span" sx={{ color: 'secondary.main' }}>24/7</Box>
@@ -1258,7 +1257,7 @@ export default function App() {
                 </Typography>
                   <Stack direction="row" spacing={2} sx={{ mt: 6 }}>
                     {[Telegram, Globe, Email].map((Icon, i) => (
-                      <IconButton key={i} sx={{ bgcolor: 'rgba(124, 58, 237, 0.05)', color: 'primary.main', '&:hover': { bgcolor: 'primary.main', color: 'white' } }}>
+                      <IconButton key={i} sx={{ bgcolor: 'rgba(212, 175, 55, 0.05)', color: 'primary.main', '&:hover': { bgcolor: 'primary.main', color: 'white' } }}>
                         <Icon size={20} />
                       </IconButton>
                     ))}
@@ -1280,14 +1279,14 @@ export default function App() {
                 <Typography variant="h6" sx={{ fontWeight: 900, mb: 4 }}>Contact Us</Typography>
                 <Stack spacing={3}>
                   <Box sx={{ display: 'flex', alignItems: 'flex-start', gap: 2 }}>
-                    <Email size={20} color="#7c3aed" />
+                    <Email size={20} color="#D4AF37" />
                     <Box>
                       <Typography variant="body2" sx={{ fontWeight: 800 }}>Email Support</Typography>
                       <Typography variant="body2" color="text.secondary">cbsetoppers@zohomail.in</Typography>
                     </Box>
                   </Box>
                   <Box sx={{ display: 'flex', alignItems: 'flex-start', gap: 2 }}>
-                    <Telegram size={20} color="#7c3aed" />
+                    <Telegram size={20} color="#D4AF37" />
                     <Box>
                       <Typography variant="body2" sx={{ fontWeight: 800 }}>Telegram Channel</Typography>
                       <Typography variant="body2" color="text.secondary">@CBSET0PPERS</Typography>
