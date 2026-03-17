@@ -57,25 +57,23 @@ import {
   Bot
 } from 'lucide-react';
 
-// Custom Purple Theme
+// Premium Golden & Black Theme
 const theme = createTheme({
   palette: {
+    mode: 'dark',
     primary: {
-      main: '#7c3aed', // Purple
+      main: '#D4AF37', // Golden
     },
     secondary: {
-      main: '#4c1d95', // Deep Purple
-    },
-    success: {
-      main: '#10b981', // Emerald/Green
+      main: '#FFD700', // Bright Gold
     },
     background: {
-      default: '#FFFFFF',
-      paper: '#f5f3ff', // Light Purple
+      default: '#000000', // Black
+      paper: '#0A0A0A', // Darker Black/Grey
     },
     text: {
-      primary: '#1e1b4b',
-      secondary: '#4b5563',
+      primary: '#FFFFFF',
+      secondary: '#B0B0B0',
     },
   },
   typography: {
@@ -126,7 +124,7 @@ const subunits = [
     description: 'Building a strong foundation for your future academic success.',
     telegram: '@CBSET0PPERS_IXth',
     icon: School,
-    color: '#a78bfa', // Light Violet
+    color: '#FFD700', // Gold
     stats: 'Foundation Prep'
   },
   {
@@ -135,7 +133,7 @@ const subunits = [
     description: 'Founded by a Class Xth T0PPER. Strategy and resources to ace your first major milestone.',
     telegram: '@CBSET0PPERS_XTH',
     icon: School,
-    color: '#8b5cf6', // Violet
+    color: '#DAA520', // GoldenRod
     stats: 'Founder\'s Expertise'
   },
   {
@@ -144,7 +142,7 @@ const subunits = [
     description: 'Kickstart your journey to higher studies with structured resources.',
     telegram: '@CBSET0PPERS_XIth',
     icon: BookOpen,
-    color: '#c4b5fd', // Light Purple
+    color: '#B8860B', // DarkGoldenRod
     stats: 'Early Prep'
   },
   {
@@ -153,7 +151,7 @@ const subunits = [
     description: 'Our flagship community of 360+ students. Get the best-in-class study material for Boards.',
     telegram: '@CBSET0PPERS',
     icon: BookOpen,
-    color: '#7c3aed', // Purple
+    color: '#D4AF37', // Metallic Gold
     stats: '360+ Active Students'
   },
   {
@@ -162,7 +160,7 @@ const subunits = [
     description: 'Engineering excellence. Bringing high-quality material to help you crack IIT-JEE.',
     telegram: '@JEE_T0PPERS',
     icon: Calculator,
-    color: '#6366f1', // Indigo
+    color: '#FFDF00', // Yellow Gold
     stats: 'New Launch'
   },
   {
@@ -171,7 +169,7 @@ const subunits = [
     description: 'Medical aspirants initiative. Focused resources and curated content for NEET.',
     telegram: '@NEET_T0PPERS',
     icon: Microscope,
-    color: '#a855f7', // Purple
+    color: '#CFB53B', // Old Gold
     stats: 'New Launch'
   },
   {
@@ -180,7 +178,7 @@ const subunits = [
     description: 'Precision prep for top central universities. Best material for the new landscape.',
     telegram: '@CUET_T0PPERS',
     icon: Globe,
-    color: '#4f46e5', // Deep Indigo
+    color: '#FFD700',
     stats: 'New Launch'
   }
 ];
@@ -587,7 +585,7 @@ export default function App() {
                   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                 >
                   <Avatar 
-                    src="./logo.png" 
+                    src="./icon.png" 
                     alt="T0PPERS 24/7 Logo"
                     sx={{ 
                       width: 50, 
@@ -1245,7 +1243,7 @@ export default function App() {
               <Grid size={{ xs: 12, md: 5 }}>
                 <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 4 }}>
                   <Avatar 
-                    src="./logo.png" 
+                    src="./icon.png" 
                     alt="T0PPERS 24/7 Logo"
                     sx={{ width: 56, height: 56, bgcolor: 'white' }}
                   >
