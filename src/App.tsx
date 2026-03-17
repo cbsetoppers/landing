@@ -1,8 +1,3 @@
-/**
- * @license
- * SPDX-License-Identifier: Apache-2.0
- */
-
 import React, { useState, useEffect } from 'react';
 import { 
   ThemeProvider, 
@@ -276,17 +271,17 @@ const CountdownSection = () => {
   }, []);
 
   const features = [
-    { icon: <Bot />, title: 'T0PPER AI', desc: 'Your personal AI tutor' },
-    { icon: <Zap />, title: 'AI TEST GEN', desc: 'Custom tests in seconds' },
-    { icon: <Brain />, title: 'AI ANALYZER', desc: 'Deep performance insights' },
+    { icon: <Bot />, title: 'T0PPER TUTOR', desc: 'Your personal mentor' },
+    { icon: <Zap />, title: 'TEST GEN', desc: 'Custom tests in seconds' },
+    { icon: <Brain />, title: 'ANALYZER', desc: 'Deep performance insights' },
     { icon: <Trophy />, title: 'MOCK TESTS', desc: 'Real exam environment' },
     { icon: <BookOpen />, title: 'STUDY MATERIAL', desc: 'Premium notes & guides' },
     { icon: <Smartphone />, title: 'LECTURES*', desc: 'Interactive video sessions' },
     { icon: <Layout />, title: 'SYLLABUS', desc: 'Never miss a topic' },
     { icon: <Clock />, title: 'EXAM TRACKER', desc: 'Stay ahead of deadlines' },
-    { icon: <Target />, title: 'AI STRATEGY', desc: 'Personalized study plans' },
+    { icon: <Target />, title: 'EXAM STRATEGY', desc: 'Personalized study plans' },
     { icon: <Palette />, title: 'SMART THEMES', desc: 'Mood-based UI switching' },
-    { icon: <Heart />, title: 'AI MOTIVATION', desc: 'Daily inspiration' },
+    { icon: <Heart />, title: 'DAILY MOTIVATION', desc: 'Daily inspiration' },
     { icon: <TrendingUp />, title: 'STATE BOARDS', desc: 'Specialized support' },
   ];
 
@@ -327,7 +322,7 @@ const CountdownSection = () => {
                 The Future of Learning is <Box component="span" sx={{ opacity: 0.7 }}>Mobile.</Box>
               </Typography>
               <Typography variant="body1" sx={{ opacity: 0.8, mb: 6, fontWeight: 400, lineHeight: 1.8, fontSize: '1.1rem', maxWidth: 700, mx: 'auto' }}>
-                We're building the most advanced AI-powered educational app for JEE, NEET, CUET, and State Boards. Get ready to transform your preparation.
+                We're building the most advanced educational app for JEE, NEET, CUET, and State Boards. Get ready to transform your preparation.
               </Typography>
 
               <Grid container spacing={2} justifyContent="center">
